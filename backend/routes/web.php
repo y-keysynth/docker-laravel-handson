@@ -35,3 +35,5 @@ $html = <<<EOF
 EOF;
     return $html;
 });
+
+Route::get('/hello', 'HelloController@index');
