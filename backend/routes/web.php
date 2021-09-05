@@ -36,4 +36,4 @@ EOF;
     return $html;
 });
 
-Route::get('/hello', 'HelloController@index');
+Route::get('/hello', 'App\Http\Controllers\HelloController@index');
