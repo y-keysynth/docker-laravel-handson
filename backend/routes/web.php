@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/info', function () {
+    return view('info');
+});
+
+Route::get('/hello/{msg}', function ($msg) {
+$html = <<<EOF
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Hello</title>
+</head>
+<body>
+    
+<h1>Hello.blade.php</h1>
+<p>{$msg}</p>
+    
+</body>
+</html>
+EOF;
+    return $html;
 });
