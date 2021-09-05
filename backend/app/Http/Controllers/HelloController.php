@@ -15,4 +15,33 @@ class HelloController extends Controller
         
         return view('hello.index', $data);
     }
+
+
+    /**
+     * フォーム画面
+     * 
+     */
+    public function add(Request $req)
+    {
+        $data = [
+            'msg'  => 'お名前を入力してください',
+        ];
+ 
+        return view('hello.add', $data);
+    }
+ 
+ 
+    /**
+     * 結果画面
+     * 
+     */
+    public function result(Request $req)
+    {
+        $message = $req->message;
+        $data = [
+            'msg'  => 'ようこそ、' . $message . ' さん！',
+        ];
+ 
+        return view('hello.result', $data);
+    }
 }
