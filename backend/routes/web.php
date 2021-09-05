@@ -37,3 +37,6 @@ EOF;
 });
 
 Route::get('/hello', 'App\Http\Controllers\HelloController@index');
+
+Route::get('/hello/add', 'HelloController@add');
+Route::post('/hello/result', 'HelloController@result');
