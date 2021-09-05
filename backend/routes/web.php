@@ -17,26 +17,26 @@ Route::get('/info', function () {
     return view('info');
 });
 
-Route::get('/hello/{msg}', function ($msg) {
-$html = <<<EOF
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<title>Hello</title>
-</head>
-<body>
+// Route::get('/hello/{msg}', function ($msg) {
+// $html = <<<EOF
+// <!DOCTYPE html>
+// <html lang="ja">
+// <head>
+// <meta charset="utf-8">
+// <title>Hello</title>
+// </head>
+// <body>
     
-<h1>Hello.blade.php</h1>
-<p>{$msg}</p>
+// <h1>Hello.blade.php</h1>
+// <p>{$msg}</p>
     
-</body>
-</html>
-EOF;
-    return $html;
-});
+// </body>
+// </html>
+// EOF;
+//     return $html;
+// });
 
 Route::get('/hello', 'App\Http\Controllers\HelloController@index');
 
-Route::get('/hello/add', 'HelloController@add');
-Route::post('/hello/result', 'HelloController@result');
+Route::get('/hello/add', 'App\Http\Controllers\HelloController@add');
+Route::post('/hello/result', 'App\Http\Controllers\HelloController@result');
