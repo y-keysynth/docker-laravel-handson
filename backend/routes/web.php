@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/info', function () {
     return view('info');
 });
+
+Route::get('/hello/{msg}', function ($msg) {
+    return view('hello');
+});
