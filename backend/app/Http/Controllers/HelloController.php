@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    public function index()
+    public function index(Request $req)
     {
-        return view('hello.index');
+        $data = [
+            'msg' => 'これはコントローラーから渡されたテキストです',
+            'page' => $req->p,
+        ];
+        
+        return view('hello.index', $data);
     }
 }
