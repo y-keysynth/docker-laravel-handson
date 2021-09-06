@@ -46,3 +46,6 @@ Route::get('/hello/switch', 'App\Http\Controllers\HelloController@switch');
 Route::get('/star', 'App\Http\Controllers\StarController@index');
 Route::get('/star/sun', 'App\Http\Controllers\StarController@sun');
 Route::get('/star/moon', 'App\Http\Controllers\StarController@moon');
+
+Route::get('board', 'App\Http\Controllers\BoardController@index');
+Route::post('board', 'App\Http\Controllers\BoardController@add');
