@@ -62,7 +62,7 @@ class HelloController extends Controller
     
         return view('hello.newline', $data);
     }
-    
+
     /**
      * ビューのテスト
      * 改行
@@ -74,5 +74,16 @@ class HelloController extends Controller
         ];
      
         return view('hello.if', ['data' => $records]);
+    }
+
+    /**
+     * ビューテスト
+     * switch文
+     */
+    public function switch()
+    {
+        $i = 2;
+    
+        return view('hello.switch', ['data' => $i]);
     }
 }
