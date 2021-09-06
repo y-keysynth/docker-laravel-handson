@@ -14,7 +14,7 @@
 <p>{{ $msg }}</p>
  
 <form action="/board" method="post">
-{{ csrf_field() }}
+@csrf
 <table>
 @if ($errors->has('subject'))
 <tr>
