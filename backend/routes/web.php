@@ -42,3 +42,7 @@ Route::post('/hello/result', 'App\Http\Controllers\HelloController@result');
 Route::get('/hello/newline', 'App\Http\Controllers\HelloController@newline');
 Route::get('/hello/if', 'App\Http\Controllers\HelloController@if');
 Route::get('/hello/switch', 'App\Http\Controllers\HelloController@switch');
+
+Route::get('/star', 'App\Http\Controllers\StarController@index');
+Route::get('/star/sun', 'App\Http\Controllers\StarController@sun');
+Route::get('/star/moon', 'App\Http\Controllers\StarController@moon');
