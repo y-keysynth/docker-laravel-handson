@@ -37,6 +37,7 @@ Route::get('/info', function () {
 // });
 
 Route::get('/hello', 'App\Http\Controllers\HelloController@index');
-
 Route::get('/hello/add', 'App\Http\Controllers\HelloController@add');
 Route::post('/hello/result', 'App\Http\Controllers\HelloController@result');
+Route::get('/hello/newline', 'App\Http\Controllers\HelloController@newline');
+Route::get('/hello/if', 'App\Http\Controllers\HelloController@if');

@@ -44,4 +44,35 @@ class HelloController extends Controller
  
         return view('hello.result', $data);
     }
+
+
+    /**
+     * ビューのテスト
+     * 改行
+     */
+    public function newline()
+    {
+        $message = 'あいうえお
+            かきくけこ
+            さしすせそ';
+    
+        $data = [
+            'message' => $message
+        ];
+    
+        return view('hello.newline', $data);
+    }
+    
+    /**
+     * ビューのテスト
+     * 改行
+     */
+    public function if()
+    {
+        $records = [
+            'one', 'two', 'three', 'four', 'five',
+        ];
+     
+        return view('hello.if', ['data' => $records]);
+    }
 }
