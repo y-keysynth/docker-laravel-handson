@@ -49,3 +49,8 @@ Route::get('/star/moon', 'App\Http\Controllers\StarController@moon');
 
 Route::get('board', 'App\Http\Controllers\BoardController@index');
 Route::post('board', 'App\Http\Controllers\BoardController@add');
+
+Route::get('/', function () {
+    logger('welcome route.');
+    return view('welcome');
+});
